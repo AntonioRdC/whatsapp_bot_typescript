@@ -2,6 +2,7 @@ import axios from 'axios';
 
 class TutorRepository {
   async postText(text: string, number: string): Promise<void> {
+    console.log(text, number);
     await axios.post(
       `https://graph.facebook.com/v17.0/${
         process.env.IDENTIFY_NUMBER_META as string
